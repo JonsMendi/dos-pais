@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -7,16 +9,19 @@ import Typography from "@mui/material/Typography";
 import RoomRoundedIcon from "@mui/icons-material/RoomRounded";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { mapPins } from "@/data/placeholders";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 export default function MapPreview() {
+  const { t } = useTranslation();
+
   return (
     <Box component="section" sx={{ py: { xs: 10, md: 16 } }}>
       <Container>
         <SectionTitle
-          eyebrow="The island, at a glance"
-          title="Everything we love, on one map."
-          description="A simple guide to the corners of São Miguel we keep returning to, with the apartment at the centre."
-          action={<Button variant="contained" color="primary">Open map</Button>}
+          eyebrow={t.map.eyebrow}
+          title={t.map.title}
+          description={t.map.description}
+          action={<Button variant="contained" color="primary">{t.map.cta}</Button>}
         />
         <Box
           sx={{

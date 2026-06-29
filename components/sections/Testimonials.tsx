@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -6,9 +8,11 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import FormatQuoteRoundedIcon from "@mui/icons-material/FormatQuoteRounded";
 import SectionTitle from "@/components/ui/SectionTitle";
-import { testimonials } from "@/data/placeholders";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 export default function Testimonials() {
+  const { t } = useTranslation();
+
   return (
     <Box
       component="section"
@@ -16,12 +20,12 @@ export default function Testimonials() {
     >
       <Container>
         <SectionTitle
-          eyebrow="From our guests"
-          title="Quiet notes, left at check-out."
+          eyebrow={t.testimonials.eyebrow}
+          title={t.testimonials.title}
           align="center"
         />
         <Grid container spacing={{ xs: 3, md: 4 }}>
-          {testimonials.map((t, i) => (
+          {t.testimonials.items.map((item, i) => (
             <Grid key={i} size={{ xs: 12, md: 4 }}>
               <Box
                 sx={{
@@ -54,13 +58,13 @@ export default function Testimonials() {
                       fontSize: { xs: "1.25rem", md: "1.4rem" },
                     }}
                   >
-                    &ldquo;{t.quote}&rdquo;
+                    &ldquo;{item.quote}&rdquo;
                   </Typography>
                   <Typography
                     variant="overline"
                     sx={{ color: "primary.light" }}
                   >
-                    {t.author}
+                    {item.author}
                   </Typography>
                 </Stack>
               </Box>
@@ -71,3 +75,5 @@ export default function Testimonials() {
     </Box>
   );
 }
+
+

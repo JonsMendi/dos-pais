@@ -1,12 +1,16 @@
+"use client";
+
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import SectionTitle from "@/components/ui/SectionTitle";
 import GuestGuideCard from "@/components/ui/GuestGuideCard";
-import { guestGuide } from "@/data/placeholders";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 export default function GuestGuide() {
+  const { t } = useTranslation();
+
   return (
     <Box
       id="guide"
@@ -19,12 +23,12 @@ export default function GuestGuide() {
     >
       <Container>
         <SectionTitle
-          eyebrow="Guest Guide"
-          title="Everything you need, gently arranged."
-          description="A small, calm folder of the things you might want to know once you have arrived — from the Wi-Fi password to the nearest pharmacy."
+          eyebrow={t.guide.eyebrow}
+          title={t.guide.title}
+          description={t.guide.description}
         />
         <Grid container spacing={{ xs: 2.5, md: 3 }}>
-          {guestGuide.map((g) => (
+          {t.guide.items.map((g) => (
             <Grid key={g.title} size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
               <GuestGuideCard title={g.title} description={g.description} />
             </Grid>
@@ -34,3 +38,4 @@ export default function GuestGuide() {
     </Box>
   );
 }
+

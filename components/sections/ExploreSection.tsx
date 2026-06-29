@@ -1,12 +1,17 @@
+"use client";
+
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import SectionTitle from "@/components/ui/SectionTitle";
 import ExploreCard from "@/components/ui/ExploreCard";
-import { exploreCards } from "@/data/placeholders";
+import { exploreCardImages } from "@/data/placeholders";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 export default function ExploreSection() {
+  const { t } = useTranslation();
+
   return (
     <Box
       id="explore"
@@ -19,17 +24,17 @@ export default function ExploreSection() {
     >
       <Container>
         <SectionTitle
-          eyebrow="Explore São Miguel"
-          title="An island made for slow days."
-          description="A small selection to help you fall into the rhythm of the island — from the coast, to the crater lakes, to the long tables by the sea."
+          eyebrow={t.explore.eyebrow}
+          title={t.explore.title}
+          description={t.explore.description}
         />
         <Grid container spacing={{ xs: 3, md: 4 }}>
-          {exploreCards.map((card) => (
+          {t.explore.cards.map((card, i) => (
             <Grid key={card.title} size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
               <ExploreCard
                 title={card.title}
                 description={card.description}
-                image={card.image}
+                image={exploreCardImages[i]}
               />
             </Grid>
           ))}
@@ -38,3 +43,4 @@ export default function ExploreSection() {
     </Box>
   );
 }
+

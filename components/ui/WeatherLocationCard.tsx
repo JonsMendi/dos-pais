@@ -12,6 +12,7 @@ import WaterDropRoundedIcon from "@mui/icons-material/WaterDropRounded";
 import ThunderstormRoundedIcon from "@mui/icons-material/ThunderstormRounded";
 import VideocamRoundedIcon from "@mui/icons-material/VideocamRounded";
 import type { WeatherCondition, WeatherLocation } from "@/lib/weather/types";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 const iconMap: Record<WeatherCondition, React.ElementType> = {
   sunny: WbSunnyRoundedIcon,
@@ -35,6 +36,7 @@ const accentMap: Record<WeatherCondition, { color: string; wash: string }> = {
 type Props = { location: WeatherLocation };
 
 export default function WeatherLocationCard({ location }: Props) {
+  const { t } = useTranslation();
   const Icon = iconMap[location.condition];
   const accent = accentMap[location.condition];
 
@@ -120,7 +122,7 @@ export default function WeatherLocationCard({ location }: Props) {
             variant="overline"
             sx={{ color: "primary.light", display: "block", mb: 0.5 }}
           >
-            Best today
+            {t.weather.bestToday}
           </Typography>
           <Typography variant="body2" sx={{ color: "text.primary" }}>
             {location.activity}
@@ -137,7 +139,7 @@ export default function WeatherLocationCard({ location }: Props) {
             startIcon={<VideocamRoundedIcon fontSize="small" />}
             sx={{ width: { xs: "100%", sm: "auto" } }}
           >
-            View live camera
+            {t.weather.viewCamera}
           </Button>
         </Box>
       </Stack>

@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -6,8 +8,11 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import ArrowDownwardRoundedIcon from "@mui/icons-material/ArrowDownwardRounded";
 import { heroImage } from "@/data/placeholders";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
     <Box
       id="home"
@@ -53,7 +58,7 @@ export default function Hero() {
             variant="overline"
             sx={{ color: "rgba(255,255,255,0.85)", letterSpacing: "0.32em" }}
           >
-            Ponta Delgada · São Miguel · Azores
+            {t.hero.location}
           </Typography>
 
           <Typography
@@ -77,7 +82,7 @@ export default function Hero() {
               maxWidth: 640,
             }}
           >
-            A place to slow down.
+            {t.hero.tagline}
           </Typography>
 
           <Typography
@@ -88,8 +93,7 @@ export default function Hero() {
               fontSize: { xs: "1rem", md: "1.1rem" },
             }}
           >
-            A quiet apartment on the edge of the Atlantic, kept warm by family
-            and the slow rhythm of the island.
+            {t.hero.body}
           </Typography>
 
           <Stack
@@ -109,7 +113,7 @@ export default function Hero() {
                 "&:hover": { backgroundColor: "rgba(255,255,255,0.92)" },
               }}
             >
-              Explore
+              {t.hero.ctaExplore}
             </Button>
             <Button
               variant="outlined"
@@ -126,32 +130,34 @@ export default function Hero() {
                 },
               }}
             >
-              View the apartment
+              {t.hero.ctaApartment}
             </Button>
           </Stack>
-        </Stack>
 
-        <Stack
-          spacing={1}
-          sx={{
-            position: "absolute",
-            bottom: { xs: 24, md: 40 },
-            left: 0,
-            right: 0,
-            color: "rgba(255,255,255,0.7)",
-            display: { xs: "none", sm: "flex" },
-            alignItems: "center",
-          }}
-        >
-          <Typography
-            variant="overline"
-            sx={{ letterSpacing: "0.3em", fontSize: "0.65rem" }}
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: { xs: 32, md: 48 },
+              left: "50%",
+              transform: "translateX(-50%)",
+            }}
           >
-            Scroll
-          </Typography>
-          <ArrowDownwardRoundedIcon fontSize="small" />
+            <ArrowDownwardRoundedIcon
+              sx={{
+                color: "rgba(255,255,255,0.5)",
+                fontSize: 28,
+                animation: "bounce 2s ease-in-out infinite",
+                "@keyframes bounce": {
+                  "0%, 100%": { transform: "translateY(0)" },
+                  "50%": { transform: "translateY(6px)" },
+                },
+              }}
+            />
+          </Box>
         </Stack>
       </Container>
     </Box>
   );
 }
+
+

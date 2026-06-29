@@ -4,8 +4,10 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import ButtonGroup from "@mui/material/ButtonGroup";
 import Container from "@mui/material/Container";
 import Drawer from "@mui/material/Drawer";
+import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -16,11 +18,79 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import { navLinks } from "@/data/placeholders";
+import { navHrefs } from "@/data/placeholders";
+import { useTranslation } from "@/lib/i18n/useTranslation";
+import type { Locale } from "@/lib/i18n/types";
+
+const LOCALES: Locale[] = ["en", "pt", "de"];
+
+function LocaleSwitcher({ scrolled }: { scrolled: boolean }) {
+  const { locale, setLocale } = useTranslation();
+  return (
+    <ButtonGroup
+      size="small"
+      aria-label="Language"
+      sx={{
+        "& .MuiButtonGroup-firstButton, & .MuiButtonGroup-middleButton, & .MuiButtonGroup-lastButton":
+          {
+            border: "1px solid",
+            borderColor: scrolled ? "rgba(28,29,31,0.18)" : "rgba(255,255,255,0.28)",
+            transition: "border-color 300ms ease, color 300ms ease, background-color 200ms ease",
+          },
+      }}
+    >
+      {LOCALES.map((l) => (
+        <Button
+          key={l}
+          onClick={() => setLocale(l)}
+          sx={{
+            px: 1.25,
+            py: 0.5,
+            minWidth: 0,
+            fontSize: "0.65rem",
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            fontWeight: locale === l ? 600 : 400,
+            color:
+              locale === l
+                ? scrolled
+                  ? "primary.main"
+                  : "common.white"
+                : scrolled
+                  ? "text.secondary"
+                  : "rgba(255,255,255,0.6)",
+            backgroundColor:
+              locale === l
+                ? scrolled
+                  ? "rgba(31,61,82,0.08)"
+                  : "rgba(255,255,255,0.14)"
+                : "transparent",
+            "&:hover": {
+              backgroundColor: scrolled
+                ? "rgba(31,61,82,0.08)"
+                : "rgba(255,255,255,0.1)",
+            },
+          }}
+        >
+          {l.toUpperCase()}
+        </Button>
+      ))}
+    </ButtonGroup>
+  );
+}
 
 export default function Navbar() {
+  const { t, locale, setLocale } = useTranslation();
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
+
+  const navItems = [
+    { label: t.nav.home, href: navHrefs.home },
+    { label: t.nav.apartment, href: navHrefs.apartment },
+    { label: t.nav.explore, href: navHrefs.explore },
+    { label: t.nav.guide, href: navHrefs.guide },
+    { label: t.nav.contact, href: navHrefs.contact },
+  ];
 
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -88,9 +158,9 @@ export default function Navbar() {
               spacing={1}
               sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}
             >
-              {navLinks.map((link) => (
+              {navItems.map((link) => (
                 <Button
-                  key={link.label}
+                  key={link.href}
                   href={link.href}
                   sx={{
                     color: scrolled ? "text.primary" : "common.white",
@@ -106,13 +176,14 @@ export default function Navbar() {
                   {link.label}
                 </Button>
               ))}
+              <LocaleSwitcher scrolled={scrolled} />
               <Button
                 variant="contained"
                 color="primary"
                 href="#contact"
                 sx={{ ml: 1.5 }}
               >
-                Stay with us
+                {t.nav.stayWithUs}
               </Button>
             </Stack>
 
@@ -170,8 +241,8 @@ export default function Navbar() {
           </IconButton>
         </Stack>
         <List sx={{ flexGrow: 1 }}>
-          {navLinks.map((link) => (
-            <ListItem key={link.label} disablePadding>
+          {navItems.map((link) => (
+            <ListItem key={link.href} disablePadding>
               <ListItemButton
                 component="a"
                 href={link.href}
@@ -198,7 +269,26 @@ export default function Navbar() {
             </ListItem>
           ))}
         </List>
-        <Box sx={{ mt: 3 }}>
+        <Divider sx={{ my: 2 }} />
+        <Stack direction="row" spacing={1} sx={{ justifyContent: "center", mb: 2 }}>
+          {LOCALES.map((l) => (
+            <Button
+              key={l}
+              variant={locale === l ? "contained" : "outlined"}
+              size="small"
+              onClick={() => setLocale(l)}
+              sx={{
+                minWidth: 44,
+                fontSize: "0.7rem",
+                letterSpacing: "0.1em",
+                fontWeight: locale === l ? 600 : 400,
+              }}
+            >
+              {l.toUpperCase()}
+            </Button>
+          ))}
+        </Stack>
+        <Box sx={{ mt: 1 }}>
           <Button
             fullWidth
             variant="contained"
@@ -207,10 +297,12 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             sx={{ py: 1.5 }}
           >
-            Stay with us
+            {t.nav.stayWithUs}
           </Button>
         </Box>
       </Drawer>
     </>
   );
 }
+
+

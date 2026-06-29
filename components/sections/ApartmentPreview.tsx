@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -6,9 +8,12 @@ import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import AmenityCard from "@/components/ui/AmenityCard";
-import { amenities, apartmentImage } from "@/data/placeholders";
+import { amenityIcons, apartmentImage } from "@/data/placeholders";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 export default function ApartmentPreview() {
+  const { t } = useTranslation();
+
   return (
     <Box
       id="apartment"
@@ -36,25 +41,20 @@ export default function ApartmentPreview() {
           <Grid size={{ xs: 12, md: 6 }}>
             <Stack spacing={3}>
               <Typography variant="overline" sx={{ color: "primary.light" }}>
-                The Apartment
+                {t.apartment.eyebrow}
               </Typography>
               <Typography variant="h2" component="h2">
-                A quiet home, kept just as we left it.
+                {t.apartment.title}
               </Typography>
               <Typography variant="subtitle1">
-                Dos Pais was opened by our parents, in a building they have
-                loved for decades. Linen on the bed, coffee on the stove, and
-                light that moves through the rooms with the day. Nothing more,
-                nothing less.
+                {t.apartment.body1}
               </Typography>
               <Typography variant="body2">
-                Two bedrooms, a soft living room, and a balcony that looks
-                toward the harbour. Designed for long mornings, slow meals, and
-                the kind of stay that does not feel rushed.
+                {t.apartment.body2}
               </Typography>
               <Box sx={{ pt: 1 }}>
                 <Button variant="contained" color="primary" size="large">
-                  View apartment
+                  {t.apartment.cta}
                 </Button>
               </Box>
             </Stack>
@@ -66,12 +66,12 @@ export default function ApartmentPreview() {
             variant="overline"
             sx={{ color: "primary.light", display: "block", mb: 3, textAlign: "center" }}
           >
-            What&rsquo;s inside
+            {t.apartment.whatsInside}
           </Typography>
           <Grid container spacing={{ xs: 2, sm: 2.5, md: 3 }}>
-            {amenities.map((a) => (
-              <Grid key={a.label} size={{ xs: 6, sm: 4, md: 2 }}>
-                <AmenityCard icon={a.icon} label={a.label} />
+            {amenityIcons.map((icon, i) => (
+              <Grid key={icon} size={{ xs: 6, sm: 4, md: 2 }}>
+                <AmenityCard icon={icon} label={t.apartment.amenities[i] ?? icon} />
               </Grid>
             ))}
           </Grid>
@@ -80,3 +80,5 @@ export default function ApartmentPreview() {
     </Box>
   );
 }
+
+

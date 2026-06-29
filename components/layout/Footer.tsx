@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -8,23 +10,11 @@ import Typography from "@mui/material/Typography";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-
-const columns = [
-  {
-    title: "Stay",
-    links: ["The Apartment", "Amenities", "Availability", "House Rules"],
-  },
-  {
-    title: "São Miguel",
-    links: ["Explore", "Recommendations", "Map", "Weather"],
-  },
-  {
-    title: "Guests",
-    links: ["Check-in", "Guest Guide", "Local Help", "Contact"],
-  },
-];
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <Box
       component="footer"
@@ -56,8 +46,7 @@ export default function Footer() {
               Dos Pais
             </Typography>
             <Typography variant="body2" sx={{ color: "rgba(251, 250, 247, 0.7)" }}>
-              A small apartment in Ponta Delgada, opened with love by a family,
-              for the people who come to slow down on São Miguel.
+              {t.footer.tagline}
             </Typography>
             <Stack direction="row" spacing={1.5}>
               <IconButton
@@ -85,7 +74,7 @@ export default function Footer() {
             direction={{ xs: "column", sm: "row" }}
             spacing={{ xs: 4, sm: 6 }}
           >
-            {columns.map((col) => (
+            {t.footer.columns.map((col) => (
               <Stack key={col.title} spacing={1.5} sx={{ minWidth: 140 }}>
                 <Typography
                   variant="overline"
@@ -124,7 +113,7 @@ export default function Footer() {
           }}
         >
           <Typography variant="caption" sx={{ color: "rgba(251, 250, 247, 0.5)" }}>
-            © {new Date().getFullYear()} Dos Pais · Ponta Delgada, São Miguel
+            © {new Date().getFullYear()} {t.footer.copyright}
           </Typography>
           <Stack direction="row" spacing={3}>
             <Typography
@@ -133,7 +122,7 @@ export default function Footer() {
               variant="caption"
               sx={{ color: "rgba(251, 250, 247, 0.5)" }}
             >
-              Privacy
+              {t.footer.privacy}
             </Typography>
             <Typography
               component="a"
@@ -141,15 +130,7 @@ export default function Footer() {
               variant="caption"
               sx={{ color: "rgba(251, 250, 247, 0.5)" }}
             >
-              Terms
-            </Typography>
-            <Typography
-              component="a"
-              href="#"
-              variant="caption"
-              sx={{ color: "rgba(251, 250, 247, 0.5)" }}
-            >
-              Imprint
+              {t.footer.terms}
             </Typography>
           </Stack>
         </Stack>

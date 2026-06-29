@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -10,6 +12,7 @@ import OpacityRoundedIcon from "@mui/icons-material/OpacityRounded";
 import AirRoundedIcon from "@mui/icons-material/AirRounded";
 import PlaceRoundedIcon from "@mui/icons-material/PlaceRounded";
 import { weather } from "@/data/placeholders";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 function Stat({
   icon: Icon,
@@ -48,6 +51,8 @@ function Stat({
 }
 
 export default function WeatherCard() {
+  const { t } = useTranslation();
+
   return (
     <Box component="section" sx={{ py: { xs: 8, md: 12 } }}>
       <Container>
@@ -107,18 +112,17 @@ export default function WeatherCard() {
                   </Typography>
                 </Stack>
                 <Typography variant="body2">
-                  A gentle island day. Soft breeze from the north, light cloud
-                  toward the late afternoon.
+                  {t.weather.currentBody}
                 </Typography>
               </Stack>
             </Grid>
             <Grid size={{ xs: 12, md: 6 }}>
               <Stack spacing={2.5}>
-                <Stat icon={WbSunnyRoundedIcon} label="Condition" value={weather.condition} />
+                <Stat icon={WbSunnyRoundedIcon} label={t.weather.statCondition} value={weather.condition} />
                 <Divider />
-                <Stat icon={OpacityRoundedIcon} label="Humidity" value={`${weather.humidity}%`} />
+                <Stat icon={OpacityRoundedIcon} label={t.weather.statHumidity} value={`${weather.humidity}%`} />
                 <Divider />
-                <Stat icon={AirRoundedIcon} label="Wind" value={`${weather.windKmh} km/h`} />
+                <Stat icon={AirRoundedIcon} label={t.weather.statWind} value={`${weather.windKmh} km/h`} />
               </Stack>
             </Grid>
           </Grid>
