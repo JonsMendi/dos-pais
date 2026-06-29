@@ -10,9 +10,10 @@ type Props = {
   image: string;
   title: string;
   description: string;
+  href?: string;
 };
 
-export default function ExploreCard({ image, title, description }: Props) {
+export default function ExploreCard({ image, title, description, href }: Props) {
   return (
     <Card
       sx={{
@@ -23,7 +24,10 @@ export default function ExploreCard({ image, title, description }: Props) {
         },
       }}
     >
-      <CardActionArea sx={{ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }}>
+      <CardActionArea
+        {...(href ? { component: "a", href } : {})}
+        sx={{ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }}
+      >
         <Box
           sx={{
             position: "relative",

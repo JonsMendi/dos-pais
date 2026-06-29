@@ -201,4 +201,12 @@ export const en: Translations = {
     privacy: "Privacy",
     terms: "Terms",
   },
+  restaurantsPage: {
+    backLabel: "Back to Explore",
+    eyebrow: "Eating on São Miguel",
+    title: "Where to eat — and why.",
+    description:
+      "The island grows what it eats. Beef from the green pastures, fish from the morning sea, cheese from the mountain farms. These are the places we send our guests to — sorted not by star rating, but by mood.",
+    mapsButton: "Open in Maps",
+  },
 };

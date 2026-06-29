@@ -201,4 +201,12 @@ export const pt: Translations = {
     privacy: "Privacidade",
     terms: "Termos",
   },
+  restaurantsPage: {
+    backLabel: "Voltar a Explorar",
+    eyebrow: "Comer em São Miguel",
+    title: "Onde comer — e porquê.",
+    description:
+      "A ilha cultiva o que come. Carne das pastagens verdes, peixe do mar da manhã, queijo das quintas da montanha. Estes são os sítios que recomendamos aos nossos hóspedes — ordenados não por estrelas, mas pelo momento.",
+    mapsButton: "Abrir no Maps",
+  },
 };

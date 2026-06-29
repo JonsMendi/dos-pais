@@ -73,4 +73,11 @@ export interface Translations {
     privacy: string;
     terms: string;
   };
+  restaurantsPage: {
+    backLabel: string;
+    eyebrow: string;
+    title: string;
+    description: string;
+    mapsButton: string;
+  };
 }

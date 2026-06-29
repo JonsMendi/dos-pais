@@ -201,4 +201,12 @@ export const de: Translations = {
     privacy: "Datenschutz",
     terms: "Nutzungsbedingungen",
   },
+  restaurantsPage: {
+    backLabel: "Zurück zu Entdecken",
+    eyebrow: "Essen auf São Miguel",
+    title: "Wo man isst — und warum.",
+    description:
+      "Die Insel produziert, was sie isst. Rindfleisch von den grünen Weiden, Fisch vom Morgensmeer, Käse von den Bergfarmen. Das sind die Orte, die wir unseren Gästen empfehlen — sortiert nicht nach Sternen, sondern nach Stimmung.",
+    mapsButton: "In Maps öffnen",
+  },
 };
