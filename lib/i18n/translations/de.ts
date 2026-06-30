@@ -38,7 +38,7 @@ export const de: Translations = {
     eyebrow: "São Miguel entdecken",
     title: "Eine Insel für langsame Tage.",
     description:
-      "Eine kleine Auswahl, die Ihnen hilft, in den Rhythmus der Insel einzutauchen — von der Küste über die Kraterseen bis zu den langen Tischen am Meer.",
+      "Eine kleine, persönliche Auswahl, die Ihnen hilft, in den Rhythmus der Insel einzutauchen — von der Küste über die Kraterseen bis zu den langen Tischen am Meer. Alle Empfehlungen werden mit Zuneigung gegeben, nicht mit Autorität.",
     cards: [
       {
         title: "Restaurants",
@@ -51,9 +51,14 @@ export const de: Translations = {
           "Schwarzer Sand, versteckte Buchten und warme Nachmittage am Atlantik.",
       },
       {
+        title: "Naturbecken",
+        description:
+          "Vulkangestein, klare Gezeitenbecken und der Rhythmus des Meeres.",
+      },
+      {
         title: "Aktivitäten",
         description:
-          "Von Kajak bis Keramik — sanfte Wege, einen Inseltag zu füllen.",
+          "Von Kajak bis Keramik, von der Walbeobachtung bis zum Canyoning — sanfte und nicht ganz so sanfte Wege, einen Inseltag zu füllen.",
       },
       {
         title: "Wandern",
@@ -61,24 +66,9 @@ export const de: Translations = {
           "Wolkenwälder, Kraterseen und Pfade, die nach Eukalyptus duften.",
       },
       {
-        title: "Walbeobachtung",
-        description:
-          "Morgen auf dem Wasser, in respektvoller Gesellschaft der Riesen.",
-      },
-      {
-        title: "Naturbecken",
-        description:
-          "Vulkangestein, klare Gezeitenbecken und der Rhythmus des Meeres.",
-      },
-      {
         title: "Aussichtspunkte",
         description:
           "Ruhige Miradouros, wo sich die Insel in Grün und Blau entfaltet.",
-      },
-      {
-        title: "Autovermietung",
-        description:
-          "Ein kleines Auto ist alles, was Sie brauchen, um den gemächlichen Inselstraßen zu folgen.",
       },
     ],
   },
@@ -208,5 +198,32 @@ export const de: Translations = {
     description:
       "Die Insel produziert, was sie isst. Rindfleisch von den grünen Weiden, Fisch vom Morgensmeer, Käse von den Bergfarmen. Das sind die Orte, die wir unseren Gästen empfehlen — sortiert nicht nach Sternen, sondern nach Stimmung.",
     mapsButton: "In Maps öffnen",
+  },
+  beachesPage: {
+    backLabel: "Zurück zu Entdecken",
+    eyebrow: "Strände auf São Miguel",
+    title: "Ins Wasser.",
+    description:
+      "Die Strände von São Miguel sind so vielfältig wie das Wetter. Als Faustregel gilt: Die Südseite ist in der Regel ruhiger und geschützter, während der Norden dem offenen Atlantik zugewandt ist und lebhaftere Wellen empfängt. Dennoch folgt keine der Seiten konsequent ihren eigenen Regeln. Dies sind unsere persönlichen Lieblinge, ohne Rangfolge geteilt.",
+    mapsButton: "In Maps öffnen",
+    tipLabel: "Gut zu wissen",
+  },
+  naturalPoolsPage: {
+    backLabel: "Zurück zu Entdecken",
+    eyebrow: "Naturbecken auf São Miguel",
+    title: "Ins Felsenbecken.",
+    description:
+      "Die Naturbecken von São Miguel sind in Vulkangestein gemeisselt und werden vom Atlantik gespeist. Viele wurden im Laufe der Jahre mit Stufen, Leitern und Plattformen ausgebaut — was sie zugänglicher macht, wenn auch etwas weniger wild. Sie sind es dennoch absolut wert. Dies sind unsere persönlichen Lieblinge.",
+    mapsButton: "In Maps öffnen",
+    tipLabel: "Gut zu wissen",
+  },
+  activitiesPage: {
+    backLabel: "Zurück zu Entdecken",
+    eyebrow: "Aktivitäten auf São Miguel",
+    title: "Eine Insel mit viel zu erleben.",
+    description:
+      "Vom offenen Atlantik bis zu den Kraterseen — São Miguel belohnt jeden, der das Apartment verlässt. Diese Aktivitäten sind den Tag wert: eine persönliche Kurzliste, kein vollständiger Reiseführer.",
+    mapsButton: "Finden",
+    tipLabel: "Gut zu wissen",
   },
 };

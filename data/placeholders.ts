@@ -23,12 +23,10 @@ export const amenityIcons = [
 export const exploreCardImages = [
   img("dospais-restaurants", 1200, 900),
   img("dospais-beaches", 1200, 900),
+  img("dospais-pools", 1200, 900),
   img("dospais-activities", 1200, 900),
   img("dospais-hiking", 1200, 900),
-  img("dospais-whales", 1200, 900),
-  img("dospais-pools", 1200, 900),
   img("dospais-views", 1200, 900),
-  img("dospais-car", 1200, 900),
 ];
 
 /** Image + rating only — text comes from translations (t.recommendations.items). */

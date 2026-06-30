@@ -38,7 +38,7 @@ export const en: Translations = {
     eyebrow: "Explore São Miguel",
     title: "An island made for slow days.",
     description:
-      "A small selection to help you fall into the rhythm of the island — from the coast, to the crater lakes, to the long tables by the sea.",
+      "A small, personal selection to help you fall into the rhythm of the island — from the coast, to the crater lakes, to the long tables by the sea. All suggestions are offered with affection, not authority.",
     cards: [
       {
         title: "Restaurants",
@@ -51,9 +51,14 @@ export const en: Translations = {
           "Black sand, hidden coves, and warm Atlantic afternoons.",
       },
       {
+        title: "Natural Pools",
+        description:
+          "Volcanic rock, clear tide pools, and the rhythm of the sea.",
+      },
+      {
         title: "Activities",
         description:
-          "From kayaking to ceramics — gentle ways to fill an island day.",
+          "From kayaking to ceramics, from whale watching to canyoning — gentle and not-so-gentle ways to fill an island day.",
       },
       {
         title: "Hiking",
@@ -61,24 +66,9 @@ export const en: Translations = {
           "Cloud forests, crater lakes, and trails that smell of eucalyptus.",
       },
       {
-        title: "Whale Watching",
-        description:
-          "Mornings on the water, in respectful company of the giants.",
-      },
-      {
-        title: "Natural Pools",
-        description:
-          "Volcanic rock, clear tide pools, and the rhythm of the sea.",
-      },
-      {
         title: "Viewpoints",
         description:
           "Quiet miradouros where the island unfolds in green and blue.",
-      },
-      {
-        title: "Car Rental",
-        description:
-          "A small car is all you need to follow the slow island roads.",
       },
     ],
   },
@@ -208,5 +198,32 @@ export const en: Translations = {
     description:
       "The island grows what it eats. Beef from the green pastures, fish from the morning sea, cheese from the mountain farms. These are the places we send our guests to — sorted not by star rating, but by mood.",
     mapsButton: "Open in Maps",
+  },
+  beachesPage: {
+    backLabel: "Back to Explore",
+    eyebrow: "Beaches on São Miguel",
+    title: "Into the water.",
+    description:
+      "São Miguel's beaches are as varied as its weather. As a general rule, the south coast tends to be calmer and sheltered, while the north faces the open Atlantic and draws livelier swells. That said, neither side follows its own rules consistently — the island keeps its own counsel. These are our personal favourites, offered without ranking.",
+    mapsButton: "Open in Maps",
+    tipLabel: "Good to know",
+  },
+  naturalPoolsPage: {
+    backLabel: "Back to Explore",
+    eyebrow: "Natural Pools on São Miguel",
+    title: "Into the rock.",
+    description:
+      "São Miguel’s natural pools are carved from volcanic rock and fed by the Atlantic. Many have been improved over the years with steps, ladders and platforms — which makes them easier to reach, if slightly less wild. They are still very much worth it. These are our personal favourites.",
+    mapsButton: "Open in Maps",
+    tipLabel: "Good to know",
+  },
+  activitiesPage: {
+    backLabel: "Back to Explore",
+    eyebrow: "Activities on São Miguel",
+    title: "An island with plenty to do.",
+    description:
+      "From the open Atlantic to the crater lakes, São Miguel rewards those who leave the apartment. These are the activities worth putting in the diary — a personal shortlist, not a complete guide.",
+    mapsButton: "Find them",
+    tipLabel: "Good to know",
   },
 };

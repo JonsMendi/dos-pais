@@ -30,12 +30,12 @@ export default function ExploreSection() {
         />
         <Grid container spacing={{ xs: 3, md: 4 }}>
           {t.explore.cards.map((card, i) => (
-            <Grid key={card.title} size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
+            <Grid key={card.title} size={{ xs: 12, sm: 6, md: 4 }}>
               <ExploreCard
                 title={card.title}
                 description={card.description}
                 image={exploreCardImages[i]}
-                href={i === 0 ? "/restaurants" : undefined}
+                href={i === 0 ? "/restaurants" : i === 1 ? "/beaches" : i === 2 ? "/natural-pools" : i === 3 ? "/activities" : undefined}
               />
             </Grid>
           ))}

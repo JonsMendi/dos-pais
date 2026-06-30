@@ -80,4 +80,28 @@ export interface Translations {
     description: string;
     mapsButton: string;
   };
+  beachesPage: {
+    backLabel: string;
+    eyebrow: string;
+    title: string;
+    description: string;
+    mapsButton: string;
+    tipLabel: string;
+  };
+  naturalPoolsPage: {
+    backLabel: string;
+    eyebrow: string;
+    title: string;
+    description: string;
+    mapsButton: string;
+    tipLabel: string;
+  };
+  activitiesPage: {
+    backLabel: string;
+    eyebrow: string;
+    title: string;
+    description: string;
+    mapsButton: string;
+    tipLabel: string;
+  };
 }

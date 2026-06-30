@@ -38,7 +38,7 @@ export const pt: Translations = {
     eyebrow: "Explorar São Miguel",
     title: "Uma ilha feita para dias lentos.",
     description:
-      "Uma pequena seleção para o ajudar a entrar no ritmo da ilha — da costa, aos lagos de cratera, às mesas compridas à beira-mar.",
+      "Uma pequena seleção pessoal para o ajudar a entrar no ritmo da ilha — da costa, aos lagos de cratera, às mesas compridas à beira-mar. Todas as sugestões são feitas com afeto, não com autoridade.",
     cards: [
       {
         title: "Restaurantes",
@@ -51,9 +51,14 @@ export const pt: Translations = {
           "Areia negra, enseadas escondidas e tardes quentes no Atlântico.",
       },
       {
+        title: "Piscinas Naturais",
+        description:
+          "Rocha vulcânica, poças cristalinas e o ritmo do mar.",
+      },
+      {
         title: "Atividades",
         description:
-          "Do caiaque à cerâmica — formas suaves de preencher um dia na ilha.",
+          "Do caiaque à cerâmica, da observação de baleias ao canyoning — formas suaves e nem tanto de preencher um dia na ilha.",
       },
       {
         title: "Caminhadas",
@@ -61,24 +66,9 @@ export const pt: Translations = {
           "Florestas de nuvens, lagos de cratera e trilhos com cheiro a eucalipto.",
       },
       {
-        title: "Observação de Baleias",
-        description:
-          "Manhãs no mar, em companhia respeitosa dos gigantes.",
-      },
-      {
-        title: "Piscinas Naturais",
-        description:
-          "Rocha vulcânica, poças cristalinas e o ritmo do mar.",
-      },
-      {
         title: "Miradouros",
         description:
           "Miradouros sossegados onde a ilha se abre em verde e azul.",
-      },
-      {
-        title: "Aluguer de Carro",
-        description:
-          "Um carro pequeno é tudo o que precisa para seguir as estradas pausadas da ilha.",
       },
     ],
   },
@@ -208,5 +198,32 @@ export const pt: Translations = {
     description:
       "A ilha cultiva o que come. Carne das pastagens verdes, peixe do mar da manhã, queijo das quintas da montanha. Estes são os sítios que recomendamos aos nossos hóspedes — ordenados não por estrelas, mas pelo momento.",
     mapsButton: "Abrir no Maps",
+  },
+  beachesPage: {
+    backLabel: "Voltar a Explorar",
+    eyebrow: "Praias em São Miguel",
+    title: "Para a água.",
+    description:
+      "As praias de São Miguel são tão variadas quanto o tempo. Em geral, a costa sul tende a ser mais calma e abrigada, enquanto o norte enfrenta o Atlântico aberto e recebe ondulações mais fortes. Dito isso, nenhum dos lados segue sempre as suas próprias regras — a ilha tem o seu próprio ritmo. Estas são as nossas favoritas pessoais, partilhadas sem hierarquia.",
+    mapsButton: "Abrir no Maps",
+    tipLabel: "Bom saber",
+  },
+  naturalPoolsPage: {
+    backLabel: "Voltar a Explorar",
+    eyebrow: "Piscinas Naturais em São Miguel",
+    title: "Para dentro da rocha.",
+    description:
+      "As piscinas naturais de São Miguel estão talhadas na rocha vulcânica e alimentadas pelo Atlântico. Muitas foram melhoradas ao longo dos anos com escadas, corrimãos e plataformas — o que as torna mais acessíveis, se bem que um pouco menos selvagens. Continuam a valer cada metro. Estas são as nossas favoritas pessoais.",
+    mapsButton: "Abrir no Maps",
+    tipLabel: "Bom saber",
+  },
+  activitiesPage: {
+    backLabel: "Voltar a Explorar",
+    eyebrow: "Atividades em São Miguel",
+    title: "Uma ilha com muito para fazer.",
+    description:
+      "Do Atlântico aberto aos lagos de cratera, São Miguel recompensa quem sai de casa. Estas são as atividades que valem um dia — uma lista pessoal e curta, não um guia completo.",
+    mapsButton: "Encontrar",
+    tipLabel: "Bom saber",
   },
 };
