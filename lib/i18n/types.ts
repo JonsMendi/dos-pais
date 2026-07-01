@@ -104,4 +104,20 @@ export interface Translations {
     mapsButton: string;
     tipLabel: string;
   };
+  hikingPage: {
+    backLabel: string;
+    eyebrow: string;
+    title: string;
+    description: string;
+    trailButton: string;
+    tipLabel: string;
+  };
+  viewpointsPage: {
+    backLabel: string;
+    eyebrow: string;
+    title: string;
+    description: string;
+    mapsButton: string;
+    tipLabel: string;
+  };
 }

@@ -226,4 +226,22 @@ export const de: Translations = {
     mapsButton: "Finden",
     tipLabel: "Gut zu wissen",
   },
+  hikingPage: {
+    backLabel: "Zurück zu Entdecken",
+    eyebrow: "Wandern auf São Miguel",
+    title: "In die Insel hinein.",
+    description:
+      "São Miguel belohnt alle, die wandern. Lorbeerwald, Kraterränder, Levadas und Wasserfälle, unter denen man schwimmen kann. Dies sind die Wege, die einen frühen Start rechtfertigen.",
+    trailButton: "Pfad öffnen",
+    tipLabel: "Gut zu wissen",
+  },
+  viewpointsPage: {
+    backLabel: "Zurück zu Entdecken",
+    eyebrow: "Aussichtspunkte auf São Miguel",
+    title: "Die Insel, die sich öffnet.",
+    description:
+      "São Miguel enthüllt sich langsam — eine Biegung in der Straße, eine Lücke in der Hecke, und plötzlich liegt die ganze Insel vor einem. Dies sind die Miradouros, bei denen es sich lohnt anzuhalten.",
+    mapsButton: "In Maps öffnen",
+    tipLabel: "Gut zu wissen",
+  },
 };

@@ -226,4 +226,22 @@ export const pt: Translations = {
     mapsButton: "Encontrar",
     tipLabel: "Bom saber",
   },
+  hikingPage: {
+    backLabel: "Voltar a Explorar",
+    eyebrow: "Caminhadas em São Miguel",
+    title: "Para dentro da ilha.",
+    description:
+      "São Miguel recompensa quem caminha. Floresta laurissilvestre, bordas de cratera, levadas e cascatas onde se pode mergulhar. Estes são os trilhos que merecem um começo cedo.",
+    trailButton: "Abrir trilho",
+    tipLabel: "Bom saber",
+  },
+  viewpointsPage: {
+    backLabel: "Voltar a Explorar",
+    eyebrow: "Miradouros em São Miguel",
+    title: "A ilha, a abrir-se.",
+    description:
+      "São Miguel revela-se devagar — uma curva na estrada, uma abertura na sebe, e de repente está a ilha inteira lá em baixo. Estes são os miradouros que merecem a paragem.",
+    mapsButton: "Abrir no Maps",
+    tipLabel: "Bom saber",
+  },
 };

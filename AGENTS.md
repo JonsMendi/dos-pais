@@ -215,4 +215,5 @@ npm run start   # Serve the production build locally
 4. **Respect the theme.** Never hardcode colour hex values or font families inside components. Always reference `theme.palette.*` and `theme.typography.*`.
 5. **Data lives in `data/`.** No copy or image URLs inside components.
 6. **Verify Next.js APIs.** Check `node_modules/next/dist/docs/` when in doubt about any Next.js API — this version may differ from your training data.
+7. **Island suggestion pages.** When adding any new category of island recommendations (restaurants, beaches, hiking, viewpoints, etc.), follow the full pattern in [`.github/instructions/island-suggestions.instructions.md`](.github/instructions/island-suggestions.instructions.md). Research the topic before writing descriptions.
 

@@ -35,7 +35,7 @@ export default function ExploreSection() {
                 title={card.title}
                 description={card.description}
                 image={exploreCardImages[i]}
-                href={i === 0 ? "/restaurants" : i === 1 ? "/beaches" : i === 2 ? "/natural-pools" : i === 3 ? "/activities" : undefined}
+                href={i === 0 ? "/restaurants" : i === 1 ? "/beaches" : i === 2 ? "/natural-pools" : i === 3 ? "/activities" : i === 4 ? "/hiking" : i === 5 ? "/viewpoints" : undefined}
               />
             </Grid>
           ))}

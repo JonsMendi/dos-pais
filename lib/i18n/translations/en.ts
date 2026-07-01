@@ -226,4 +226,22 @@ export const en: Translations = {
     mapsButton: "Find them",
     tipLabel: "Good to know",
   },
+  hikingPage: {
+    backLabel: "Back to Explore",
+    eyebrow: "Hiking on São Miguel",
+    title: "Into the island.",
+    description:
+      "São Miguel rewards those who walk. Laurisilva forest, crater rims, levadas, and waterfalls you can swim under. These are the trails worth the early start.",
+    trailButton: "Open trail",
+    tipLabel: "Good to know",
+  },
+  viewpointsPage: {
+    backLabel: "Back to Explore",
+    eyebrow: "Viewpoints on São Miguel",
+    title: "The island, opening up.",
+    description:
+      "São Miguel reveals itself slowly — a bend in the road, a gap in the hedge, and suddenly there is the whole island laid out below you. These are the miradouros worth stopping for.",
+    mapsButton: "Open in Maps",
+    tipLabel: "Good to know",
+  },
 };
